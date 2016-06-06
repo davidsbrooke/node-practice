@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grizzabella</title>
+    <base href="/"/>
+    <link rel="stylesheet" href="http://bootswatch.com/darkly/bootstrap.min.css"  />
+</head>
+
+<body>
+    <h1>Index</h1>
+
+<ui-view> </ui-view>
+
+<!-- angular -->
+    <script src="scripts/angular/angular.min.js"></script>
+    <script src="scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="scripts/angular-resource/angular-resource.min.js"></script>
+
+    <!-- Modules -->
+    <script src="/client/shared/module.js"></script>
+    <script src="/client/app/home/home.module.js"></script>
+    <script src="/client/app/players/players.module.js"></script>
+    <script src="/client/app/teams/teams.module.js"></script>
+    <!-- services -->
+
+    <script src="/client/app/players/players.service.js"></script>
+    <script src="/client/app/teams/teams.service.js"></script>
+
+
+    <!-- controllers -->
+    <script src="/client/app/home/home.controller.js"></script>
+    <script src="/client/app/players/main/main.controller.js"></script>
+    <script src="/client/app/players/details/details.controller.js"></script>
+    <script src="/client/app/teams/teams.controller.js"></script>
+    <script src="/client/app/players/create/create.controller.js"></script>
+    <script src="/client/app/teams/details/team.details.controller.js"></script>
+
+
+</body>
+
+</html>

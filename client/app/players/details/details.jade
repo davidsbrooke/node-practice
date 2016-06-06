@@ -1,0 +1,61 @@
+link(rel="stylesheet" href="/client/app/players/details/details.css")
+body
+h1.well.container.hcenter Player Details
+
+
+ul.hcenter(style="list-style: none" ng-show="!vm.isEditing") 
+  img(ng-src="{{vm.player.image}}", style="height 50px; width 50px;")
+  li First Name: {{vm.player.firstName}}
+  li Last Name: {{vm.player.lastName}}
+  li Age: {{vm.player.age}}
+  li Sport: {{vm.player.sport}}
+  li Position: {{vm.player.position}}
+  li Height: {{vm.player.height}}
+  li Weight: {{vm.player.weight}}lbs
+  li Number: {{vm.player.number}} 
+  li Team: {{vm.player.team}}
+  li College: {{vm.player.college}}
+  li Origin: {{vm.player.nationality}}
+form.hcenter.well.container(ng-show="vm.isEditing" ng-submit="vm.update()")
+  label First Name: 
+      input.form-control(ng-model="vm.updatePlayer.firstName")
+      br
+      label Last Name:
+      input.form-control(ng-model="vm.updatePlayer.lastName")
+      br
+      label Age:
+      input.form-control(ng-model="vm.updatePlayer.age")
+      br
+      label Sport:
+      input.form-control(ng-model="vm.updatePlayer.sport")
+      br
+      label Position:
+      input.form-control(ng-model="vm.updatePlayer.position")
+      br
+      label Height:
+      input.form-control(ng-model="vm.updatePlayer.height")
+      br
+      label Weight:
+      input.form-control(ng-model="vm.updatePlayer.weight")
+      br
+      label Number:
+      input.form-control(ng-model="vm.updatePlayer.number")
+      br
+      label Image:
+      input.form-control(ng-model="vm.updatePlayer.image")
+      br
+      label Team:
+      input.form-control(ng-model="vm.updatePlayer.team")
+      br
+      label College:
+      input.form-control(ng-model="vm.updatePlayer.college")
+      br
+      label Origin:
+      input.form-control(ng-model="vm.updatePlayer.nationality")
+      br
+      button.btn.btn-danger(ng-click="vm.isEditing = false" type="button" style="margin-right: 10px") Back
+      
+      button.btn.btn-success Submit 
+div.hcenter.well.container(ng-show="!vm.isEditing" ng-submit="vm.updatePlayer()")  
+  button.btn.btn-danger(ng-click="vm.remove()" style="margin-right: 20px;") balete
+  button.btn.btn-success(ng-click="vm.startEditing()") edit

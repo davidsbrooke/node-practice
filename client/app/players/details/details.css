@@ -1,0 +1,9 @@
+.hcenter {
+  text-align: center;
+  color: rgb(235, 101, 15);
+  border: 5px solid white;
+}
+
+body {
+  background-image: url(http://laskaproject.com/wp-content/uploads/2012/12/background_grain-01.png);
+}

@@ -1,0 +1,3 @@
+h1 Team Info
+div(ng-repeat="t in vm.teams")
+  a(ui-sref="team details({id: t.id})") {{t.name}} {{t.location}}
